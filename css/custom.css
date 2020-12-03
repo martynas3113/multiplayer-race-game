@@ -2,5 +2,93 @@ body,
 body* {
     margin: 0;
     padding: 0;
-    
+    vertical-align: top;
+    box-sizing: border-box;
 }
+
+body {
+    background-image: url(../img/background1.webp);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.car {
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    background-image: url(../img/sport-car.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -200px;
+    transition: all 1s;
+
+}
+    .car[data-model="golf"]{
+        background-image: url(../img/golf.png);
+    }
+    .car[data-model="bmw"]{
+        background-image: url(../img/bmw.png);
+    }
+    .car[data-model="orange"]{
+        background-image: url(../img/orange.png);
+    }
+
+    .car::before{
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fffc;
+        color: black;
+        font-size: 20px;
+    }
+    .car.car-1{
+        top: 40vh;
+    }
+        .car.car-1::before{
+            content: 'W';
+            text-align: center;
+        }
+
+    .car.car-2 {
+        top: 80vh;
+    }
+        .car.car-2::before {
+            content:'P' ;
+            text-align: center;
+        }
+.line {
+    display: inline-block;
+    width: 50vh;
+    height: 40px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40vh;
+    left: 200px;
+    transform-origin: top left;
+    border: 5px solid white;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    
+
+}   
+
+    .line.finish {
+        left: 98%;
+        color: red;
+        border: 5px solid red;
+        border-left: none;
+    border-right: none;
+        
+    }
