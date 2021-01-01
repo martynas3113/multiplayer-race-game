@@ -1,7 +1,5 @@
 # Multiplayer racing game
 
-Description...
-
 ## Features
 - playable on single device (computer)
 - single track (straight line)
